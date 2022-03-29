@@ -1,11 +1,12 @@
 package es.rgmf;
 
+import javax.swing.text.PlainDocument;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-	    int opcion;
+	    int opcion, int ancho, int largo;
         Scanner entrada = new Scanner(System.in);
 
         do {
@@ -17,7 +18,11 @@ public class Main {
             System.out.print("Elige una opción: ");
             opcion = entrada.nextInt();
             entrada.nextLine();
-
+switch (opcion){
+    case 1:
+        largo = pedirNumero(entrada, "Dame la longitud maxima del eje x: ");
+        dibujarCuadrado(largo);
+}
             // TODO Completa el programa con un switch para realizar lo indicado en el menú.
             //      Usa los métodos estáticos que ya hay implementadas y que puedes ver debajo.
 
